@@ -1,3 +1,6 @@
+# Linux kernel source (available at github.com/torvalds/linux)
+linux-kernel/
+
 # Build artifacts
 build/
 *.o
