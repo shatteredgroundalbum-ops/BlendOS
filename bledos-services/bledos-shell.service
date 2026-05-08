@@ -1,0 +1,26 @@
+[Unit]
+Description=BledOS Shell (Blender Desktop Environment)
+After=bledos-compositor.service graphical.target systemd-logind.service NetworkManager.service pipewire.service
+Wants=bledos-compositor.service
+Requires=bledos-compositor.service
+Conflicts=plymouth-quit.service
+
+[Service]
+Type=simple
+Environment="WAYLAND_DISPLAY=bledos-0"
+Environment="XDG_RUNTIME_DIR=/run/user/%U"
+Environment="DISPLAY="
+Environment="SDL_VIDEODRIVER=wayland"
+Environment="QT_QPA_PLATFORM=wayland"
+Environment="GDK_BACKEND=wayland"
+Environment="MOZ_ENABLE_WAYLAND=1"
+Environment="ELECTRON_OZONE_PLATFORM_HINT=wayland"
+ExecStart=/usr/bin/blender --app-template BledOS --python-expr "import bledos; bledos.start()"
+Restart=on-failure
+RestartSec=5
+
+# Give Blender time to start up and connect to compositor
+TimeoutStartSec=30
+
+[Install]
+WantedBy=graphical.target

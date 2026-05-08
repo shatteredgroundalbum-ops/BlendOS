@@ -1,0 +1,117 @@
+# BledOS ISO Package List
+# Based on Arch Linux releng profile
+
+# ─── Base System ──────────────────────────────────────────────
+base
+base-devel
+linux
+linux-firmware
+mkinitcpio
+grub
+efibootmgr
+os-prober
+
+# ─── Init & Service Management ────────────────────────────────
+systemd
+systemd-sysvcompat
+dbus
+
+# ─── Boot & Filesystem ────────────────────────────────────────
+dosfstools
+ntfs-3g
+btrfs-progs
+xfsprogs
+f2fs-tools
+lvm2
+cryptsetup
+
+# ─── Network ──────────────────────────────────────────────────
+networkmanager
+iwd
+wpa_supplicant
+dhcp
+dnsutils
+openssh
+curl
+wget
+
+# ─── Audio ────────────────────────────────────────────────────
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
+alsa-utils
+pavucontrol
+
+# ─── GPU & Display ────────────────────────────────────────────
+mesa
+vulkan-radeon
+vulkan-intel
+vulkan-mesa-layers
+lib32-mesa
+lib32-vulkan-radeon
+lib32-vulkan-intel
+egl-wayland
+wayland
+xorg-xwayland
+libdrm
+libinput
+
+# ─── BledOS Compositor Dependencies ──────────────────────────
+wlroots
+wayland-protocols
+json-c
+
+# ─── Blender & BledOS Shell ──────────────────────────────────
+blender
+python-pydbus
+python-pyalpm
+python-dbus
+python-gobject
+
+# ─── Core Desktop Applications ───────────────────────────────
+firefox
+alacritty
+mpv
+libreoffice-fresh
+feh
+htop
+neovim
+
+# ─── Development Tools ───────────────────────────────────────
+git
+meson
+ninja
+pkgconf
+gcc
+make
+python-pip
+python-setuptools
+
+# ─── System Utilities ────────────────────────────────────────
+udisks2
+upower
+bluez
+bluez-utils
+polkit
+udisks2
+gvfs
+gvfs-mtp
+gvfs-smb
+gvfs-afc
+
+# ─── Fonts ───────────────────────────────────────────────────
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ttf-dejavu
+ttf-liberation
+
+# ─── Installer ───────────────────────────────────────────────
+calamares
+calamares-extensions
+
+# ─── Archiso Build Tools ─────────────────────────────────────
+archiso
+squashfs-tools
+dosfstools

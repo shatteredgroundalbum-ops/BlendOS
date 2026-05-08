@@ -1,0 +1,21 @@
+[Unit]
+Description=BledOS Wayland Compositor
+After=graphical-pre.target systemd-logind.service
+Wants=systemd-logind.service
+Conflicts=plymouth-quit.service
+
+[Service]
+Type=notify
+Environment="WAYLAND_DISPLAY=bledos-0"
+Environment="XDG_RUNTIME_DIR=/run/user/%U"
+ExecStart=/usr/bin/bledos-compositor
+Restart=on-failure
+RestartSec=3
+
+# Security hardening
+NoNewPrivileges=no
+ProtectSystem=false
+ProtectHome=false
+
+[Install]
+WantedBy=graphical.target

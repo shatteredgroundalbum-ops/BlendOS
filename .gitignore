@@ -1,0 +1,33 @@
+# Build artifacts
+build/
+*.o
+*.so
+*.a
+*.pyc
+__pycache__/
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sandbox artifacts
+.browser_data/
+.psiphon_data/
+outputs/
+generated_images/
+.agent_hooks/
+
+# Arch ISO build artifacts
+archiso/work/
+archiso/out/
+*.iso
+
+# Misc
+*.log
