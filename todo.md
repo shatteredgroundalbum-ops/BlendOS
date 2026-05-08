@@ -1,46 +1,23 @@
-# BledOS - Blender as Operating System - Project Plan
+# BlendOS Project - Blender 4.5 LTS Download and Upload
 
-## Phase 1: Research & Feasibility ✅
-- [x] Research Blender's architecture, Python API capabilities, and headless mode
-- [x] Research minimal Linux distributions suitable as a base (Arch, Alpine, Debian minimal)
-- [x] Research X11/Wayland window management and how to make Blender the sole compositor
-- [x] Research Blender's event system and input handling outside of windowed mode
-- [x] Research existing similar projects (Blender as kiosk, custom compositors)
+## Current Task: Download Blender 4.5 LTS and push to GitHub
 
-## Phase 2: Architecture Design & Specification ✅
-- [x] Design the OS architecture layers (kernel → display server → Blender)
-- [x] Design the Blender-based shell/deck system (file manager, terminal, app launcher)
-- [x] Design inter-process communication (Blender Python ↔ system services)
-- [x] Design the window management strategy within Blender's 3D viewport
-- [x] Design security and permission model
+- [ ] Download Blender 4.5 LTS source code from blender.org
+- [ ] Extract and organize Blender source files in workspace
+- [ ] Push Blender files to GitHub repository file by file
+- [ ] Verify all files uploaded successfully
 
-## Phase 3: Technical Specification Document ✅
-- [x] Write comprehensive technical specification (BledOS_Technical_Specification.md)
-- [x] Create architecture diagrams
-- [x] Define API boundaries between components
-- [x] Specify hardware requirements and supported platforms
+## Project Context
+- BlendOS: A brand new OS where Blender 3D IS the operating system shell
+- Architecture: C (hardware) → C++ (bridge) → Python/Blender (OS layer)
+- Linux kernel source is for reference only (downloaded during installation)
+- GitHub repo: shatteredgroundalbum-ops/BlendOS
+- Blender 4.5 LTS will be the base (LTS supported until July 2027)
+- Target: Option 3 - Blender-Based Creative OS (most realistic approach)
 
-## Phase 4: Core Implementation (In Progress)
-- [x] Compositor skeleton (bledos-compositor/src/main.c + meson.build)
-- [x] Core shell add-on (bledos-shell-addons/bledos_core/__init__.py)
-- [x] Application template (bledos-default-template/startup.py)
-- [x] Systemd services (bledos-compositor.service, bledos-shell.service)
-- [x] Arch ISO build system (packages.x86_64, build-iso.sh)
-- [x] README and project documentation
-- [ ] File Manager add-on (bledos_filemanager)
-- [ ] Terminal add-on (bledos_terminal)
-- [ ] Settings add-on (bledos_settings)
-- [ ] Dock add-on (bledos_dock)
-- [ ] App Launcher add-on (bledos_app_launcher)
-- [ ] Input Router add-on (bledos_input_router)
-- [ ] Window Manager add-on (bledos_window_manager)
-- [ ] System Tray add-on (bledos_system_tray)
-- [ ] Notification add-on (bledos_notification)
-- [ ] Power add-on (bledos_power)
-
-## Phase 5: Integration & Testing
-- [ ] Integration testing of all add-ons together
-- [ ] Test ISO build in QEMU
-- [ ] Input routing end-to-end validation
-- [ ] DMA-BUF texture sharing prototype
-- [ ] Performance profiling and optimization
+## Why Blender 4.5 LTS?
+- API stability with fewer breaking changes
+- Two years of bugfix support (until July 2027)
+- Mature Vulkan backend for better performance
+- Final LTS release of 4.x series
+- Best for long-term architecture planning

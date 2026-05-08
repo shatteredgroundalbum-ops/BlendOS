@@ -1,3 +1,9 @@
+# Downloaded archives
+*.tar.xz
+*.tar.gz
+*.zip
+*.bundle
+
 # Linux kernel source (available at github.com/torvalds/linux)
 linux-kernel/
 
@@ -26,11 +32,13 @@ Thumbs.db
 outputs/
 generated_images/
 .agent_hooks/
+.screenshots/
 
-# Arch ISO build artifacts
-archiso/work/
-archiso/out/
-*.iso
+# Screenshots
+Screenshot_*.jpg
+
+# Summarized conversations
+summarized_conversations/
 
 # Misc
 *.log
